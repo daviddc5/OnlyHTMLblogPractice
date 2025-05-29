@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New York City</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        body {
+          font-family: 'Inter', sans-serif;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom styles can be added here if needed, or within the Tailwind directive above */
+      body {
+        @apply bg-gray-100 text-gray-800 leading-relaxed;
+      }
+      nav ul {
+        @apply flex space-x-4;
+      }
+      nav a {
+        @apply text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors;
+      }
+      nav a:hover, nav a.active {
+        @apply bg-blue-500 text-white;
+      }
+      figure img {
+        @apply rounded-lg shadow-lg;
+      }
+      figcaption {
+        @apply text-sm text-gray-600 mt-2 text-center;
+      }
+      aside ol li {
+        @apply mb-1;
+      }
+      video, audio {
+        @apply w-full max-w-md rounded-lg shadow-md;
+      }
+      /* Additional styling for better visual appeal */
+      .content-section {
+        @apply bg-white p-6 rounded-lg shadow-md mb-6;
+      }
+      .content-section h2 {
+        @apply text-2xl font-semibold text-gray-700 mb-4;
+      }
+      .content-section p, .content-section ol {
+        @apply text-gray-700;
+      }
+      .button-style {
+        @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <span class="font-bold text-xl text-blue-600">NYC Info</span>
+          </div>
+          <div class="hidden md:block">
+            <ul class="ml-10 flex items-baseline space-x-4">
+              <li><a href="#about-nyc" class="active">About NYC</a></li>
+              <li><a href="#food">Food Guide</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 sm:py-20 text-center rounded-b-xl shadow-xl">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">New York City</h1>
+        <p class="text-lg sm:text-xl text-indigo-200">The City That Never Sleeps</p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 space-y-8">
+          <section id="about-nyc" class="content-section">
+            <article>
+              <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">About The Big Apple</h2>
+              <p class="mb-4">
+                New York City is made up of five boroughs which include Queens,
+                Manhattan, Brooklyn, the Bronx, and Staten Island. The city is
+                the home of approximately 8 million people. In 1876, France
+                gifted the City of New York what is known as the Statue of
+                Liberty, which is currently located on Liberty Island and
+                commonly visited by tourists. However, it took 10 years to
+                assemble and therefore wasn’t unveiled until 1886.
+              </p>
+              <p class="mb-4">
+                Another tourist destination is Times Square. Times Square is
+                commonly known for the big buildings, Broadway shows, and
+                bright neon signs. This famous location was named after The New
+                York Times after the Times moved to that location. Prior to
+                that, it was named Longacre Square.
+              </p>
+              <p>
+                New York City is also known for its iconic bridges that connect
+                the boroughs and allow ease of transportation across the vast
+                metropolis.
+              </p>
+            </article>
+          </section>
+
+          <figure class="content-section text-center">
+            <img
+              src="https://images.unsplash.com/photo-1524252520907-arc9670403cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Statue of Liberty"
+              class="mx-auto mb-4 max-h-96 object-cover rounded-lg"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/CCCCCC/FFFFFF?text=Statue+of+Liberty+Image';"
+            />
+            <figcaption>
+              The Statue of Liberty, a popular tourist attraction located on
+              Liberty Island, gifted by France.
+            </figcaption>
+          </figure>
+
+          <section id="media" class="content-section">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">The Sights & Sounds of NYC</h2>
+            <article class="mb-6">
+              <p>
+                While the view in the city is beautiful, the sounds are not
+                always as lovely. Below you'll see an example of the view and
+                the sounds you might encounter in NYC.
+              </p>
+            </article>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-medium text-gray-700 mb-2">NYC Skyline Timelapse</h3>
+                <video controls class="rounded-lg shadow-lg">
+                  <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div>
+                <h3 class="text-xl font-medium text-gray-700 mb-2">Typical NYC Sounds</h3>
+                <audio controls class="rounded-lg shadow-lg w-full">
+                  <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside id="food" class="md:col-span-1 content-section bg-indigo-50">
+          <h2 class="text-2xl font-semibold text-indigo-700 mb-4 border-b-2 border-indigo-500 pb-2">NYC Foodie Guide</h2>
+          <p class="mb-4 text-indigo-600">
+            New York City is very popular for the variety of great food it has.
+            Some of the top food items in NYC include:
+          </p>
+          <ol class="list-decimal list-inside space-y-2 text-indigo-700">
+            <li>Pizza (especially New York style!)</li>
+            <li>Bagels with lox and cream cheese</li>
+            <li>Classic Burgers and Deli Sandwiches</li>
+            <li>Authentic Ramen bowls</li>
+            <li>Street Tacos from diverse vendors</li>
+            <li>Delicious Pasta dishes</li>
+            <li>Iconic Desserts like cheesecake</li>
+          </ol>
+        </aside>
+      </div>
+    </main>
+
+    <footer id="contact" class="bg-gray-800 text-white text-center py-8 mt-auto rounded-t-xl shadow-inner">
+      <div class="container mx-auto px-4">
+        <p class="mb-2">Page created for demonstration purposes.</p>
+        <p>
+          Contact information:
+          <a href="mailto:daviddiazclifton@gmail.com" class="text-blue-400 hover:text-blue-300 underline">
+            daviddiazclifton@gmail.com
+          </a>
+        </p>
+        <p class="mt-2 text-sm text-gray-400">&copy; 2025 NYC Info Page. All rights reserved (conceptually).</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple script for active nav link highlighting
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function changeNav() {
+          let index = sections.length;
+
+          while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+          
+          navLinks.forEach((link) => link.classList.remove('active'));
+          // Ensure the link exists before trying to add 'active' class
+          if (navLinks[index]) {
+            const activeLink = document.querySelector(`nav a[href="#${sections[index].id}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        }
+
+        // Initial call
+        changeNav();
+        // Call on scroll
+        window.addEventListener('scroll', changeNav);
+
+        // Smooth scroll for nav links
+        navLinks.forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Check if it's an internal link
+            if (href.startsWith('#')) {
+              e.preventDefault();
+              const targetId = href.substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: 'smooth'
+                });
+                // Update URL hash without page jump for better UX
+                if(history.pushState) {
+                    history.pushState(null, null, `#${targetId}`);
+                } else {
+                    location.hash = `#${targetId}`;
+                }
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
