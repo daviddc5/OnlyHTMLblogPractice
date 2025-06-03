@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davie JR's Menu - Improved</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,700|Oswald:300,400,700" rel="stylesheet">
+  <style>
+    /* Minimal Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Universal Styles */
+    body {
+      background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      color: #333; /* Default text color for readability */
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    nav {
+      text-align: center;
+      padding: 20px 0; /* Added some vertical padding */
+    }
+
+    nav img {
+      display: block;
+      width: 180px;
+      margin: 0 auto 20px auto; /* Centered with bottom margin */
+    }
+
+    nav ul {
+      list-style-type: none; /* Remove default bullet points */
+    }
+
+    nav li {
+      /* Mimicking original stacked layout from nav span { display: block; } */
+      margin: 10px 0; /* Spacing between nav items, from original nav span */
+    }
+
+    nav a {
+      color: #666666;
+      font-size: 16px; /* From original nav span */
+      font-weight: 100; /* From original nav span */
+      letter-spacing: 2px; /* From original nav span */
+      padding: 5px 10px; /* Make link easier to click */
+      display: inline-block; /* Allow padding */
+    }
+
+    nav a:hover {
+      color: #05A8AA; /* Added hover effect */
+    }
+
+    /* Content Container */
+    .content {
+      width: 95%; /* Adjusted from 100% to work with margin */
+      max-width: 900px; /* Added max-width for better layout on wider screens */
+      height: 500px; /* As per original */
+      margin: 20px auto; /* Centered block with top/bottom margin */
+      overflow: scroll; /* As per original */
+      background-color: rgba(255, 255, 255, 0.92); /* Slight background to improve readability over busy background */
+      border-radius: 8px; /* Softer edges */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Subtle shadow */
+    }
+
+    /* Content Header */
+    .header {
+      background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+      background-position: center;
+      background-size: cover;
+      height: 320px; /* As per original */
+      display: flex; /* Using flex to easily center h1 vertically and horizontally */
+      align-items: center;
+      justify-content: center;
+      text-align: center; /* Ensure text within h1 is centered if it wraps */
+    }
+
+    .header h1 {
+      background-color: #05A8AA;
+      color: #FFF;
+      font-family: 'Oswald', sans-serif;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.3; /* Adjusted from fixed 40px for flexibility */
+      padding: 20px 30px; /* Adjusted padding */
+      /* width: 68%; -- Flexbox handles centering, max-width is better */
+      /* margin: 0 auto; -- Flexbox handles centering */
+      max-width: 80%; /* Prevent h1 from being too wide within the header */
+      border-radius: 5px; /* Slight rounding */
+    }
+
+    /* Content Body */
+    .content .body { /* Original: .content .body */
+      width: 90%;
+      margin: 25px auto; /* Added top/bottom margin for spacing */
+    }
+
+    .body p {
+      color: #333333;
+      font-weight: 100; /* Consider a slightly higher weight like 300 or 400 for body text readability */
+      line-height: 1.7; /* Adjusted for better relative spacing */
+      /* width: 90%; -- Parent .body is already 90%, paragraph doesn't need to be 81% of content. Let it fill its container. */
+      margin: 18px auto 30px auto; /* Center paragraph text block and add more bottom margin */
+      text-align: left; /* For better readability of paragraph text */
+      max-width: 700px; /* Constrain line length for readability, centered by margin auto */
+    }
+
+    /* Content Button */
+    .button {
+      border-radius: 4px;
+      color: #05A8AA;
+      background-color: #transparent; /* Make background transparent initially */
+      display: block;
+      font-weight: 700;
+      width: 220px; /* Slightly wider */
+      padding: 15px 20px; /* Adjusted padding */
+      margin: 40px auto;
+      border: 2px solid #05A8AA; /* Made border more prominent */
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    }
+
+    .button:hover {
+      background-color: #05A8AA;
+      border-color: #05A8AA; /* Ensure border color changes too */
+      color: #FFF;
+    }
+
+    /* Content Nutrition */
+    ul.nutrition {
+      padding: 20px 0; /* Adjusted padding */
+      list-style: none; /* Moved from li for conciseness */
+      text-align: center; /* Center the inline-block list items */
+    }
+
+    ul.nutrition li {
+      display: inline-block; /* Items will sit side-by-side and wrap if needed */
+      background-color: #05A8AA;
+      width: 180px; /* Adjusted width for content */
+      padding: 15px 10px; /* Adjusted padding */
+      margin: 8px; /* Spacing between items */
+      border-radius: 4px; /* Rounded corners */
+      vertical-align: top; /* Align items nicely if they wrap to multiple lines */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for li */
+    }
+
+    .nutrition .category {
+      color: white;
+      font-weight: 100;
+      letter-spacing: 2px;
+      display: block;
+      font-size: 0.85em; /* Slightly smaller */
+      margin-bottom: 8px; /* Space between category and value */
+      text-transform: uppercase; /* Common for categories */
+    }
+
+    .nutrition .value {
+      color: white;
+      font-size: 24px; /* Slightly adjusted */
+      font-weight: 700;
+      letter-spacing: 1px; /* Slightly reduced for numerical readability */
+      display: block; /* Ensure it takes full width within li */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie JR's Food Logo" />
+    <ul>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">NUTRITION</a></li>
+      <li><a href="#">ORDER</a></li>
+      <li><a href="#">LOCATIONS</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="header">
+      <h1>BBQ BACON BURGER</h1>
+    </div>
+    <div class="body">
+      <p>
+        Our BBQ Bacon Burger features our special house ground blend of wagyu and sirloin, spiced perfectly, and finished off with just a drop of white truffle oil. A butter grilled brioche bun layered with roasted red onion, perfectly crispy pork belly, and our hickory smoked BBQ sauce.
+      </p>
+      <a href="#" class="button">ORDER NOW</a>
+      <ul class="nutrition">
+        <li>
+          <span class="category">CALORIES</span>
+          <span class="value">678</span>
+        </li>
+        <li>
+          <span class="category">FAT</span>
+          <span class="value">32g</span>
+        </li>
+        <li>
+          <span class="category">PROTEIN</span>
+          <span class="value">8g</span>
+        </li>
+        <li>
+          <span class="category">CARBS</span> <span class="value">34g</span>
+        </li>
+        <li>
+          <span class="category">SODIUM</span>
+          <span class="value">112mg</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
