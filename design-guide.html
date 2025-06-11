@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design Guide</title>
+    <link rel="stylesheet" href="design-guide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HTML Cheat Sheet</a></li>
+            <li><a href="design-guide.html">Website Design Guide</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Website Design System</h1>
+        <p>A guide to the visual style, components, and typography for this website.</p>
+    </header>
+
+    <main>
+        <section id="colors">
+            <h2>Colors</h2>
+            <div class="color-container">
+                <div class="color-swatch" style="background-color: #344a40;"></div>
+                <div class="color-info">
+                    <p><strong>Primary Green</strong></p>
+                    <p><code>#344a40</code></p>
+                    <p>Used for main headers and backgrounds.</p>
+                </div>
+            </div>
+            <div class="color-container">
+                <div class="color-swatch" style="background-color: #007bff;"></div>
+                <div class="color-info">
+                    <p><strong>Accent Blue</strong></p>
+                    <p><code>#007bff</code></p>
+                    <p>Used for links, headings, and table headers to draw attention.</p>
+                </div>
+            </div>
+            <div class="color-container">
+                <div class="color-swatch" style="background-color: #f8f9fa;"></div>
+                <div class="color-info">
+                    <p><strong>Light Background</strong></p>
+                    <p><code>#f8f9fa</code></p>
+                    <p>Provides a clean and readable background for the main content.</p>
+                </div>
+            </div>
+            <div class="color-container">
+                <div class="color-swatch" style="background-color: #212529;"></div>
+                <div class="color-info">
+                    <p><strong>Primary Text</strong></p>
+                    <p><code>#212529</code></p>
+                    <p>The main color for body text to ensure high readability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fonts">
+            <h2>Fonts</h2>
+            <div class="font-container">
+                <h3>Roboto</h3>
+                <p class="font-style-regular roboto">The quick brown fox jumps over the lazy dog. (Regular)</p>
+                <p class="font-style-bold roboto">The quick brown fox jumps over the lazy dog. (Bold)</p>
+                <p class="font-style-italic roboto">The quick brown fox jumps over the lazy dog. (Italic)</p>
+            </div>
+            <div class="font-container">
+                <h3>Source Sans Pro</h3>
+                <p class="font-style-regular source-sans">The quick brown fox jumps over the lazy dog. (Regular)</p>
+                <p class="font-style-bold source-sans">The quick brown fox jumps over the lazy dog. (Bold)</p>
+            </div>
+        </section>
+
+        <section id="text-styles">
+            <h2>Text Styles</h2>
+            <div class="text-style-container">
+                <h1>H1: Main Heading</h1>
+                <ul>
+                    <li>Font-family: 'Roboto', sans-serif</li>
+                    <li>Font-size: 2.5rem</li>
+                    <li>Font-weight: 700 (bold)</li>
+                    <li>Color: #007bff</li>
+                </ul>
+            </div>
+            <div class="text-style-container">
+                <h2>H2: Subheading</h2>
+                <ul>
+                    <li>Font-family: 'Source Sans Pro', sans-serif</li>
+                    <li>Font-size: 2em</li>
+                    <li>Font-weight: 700 (bold)</li>
+                    <li>Color: #007bff</li>
+                </ul>
+            </div>
+            <div class="text-style-container">
+                <p>P: Paragraph Text</p>
+                <ul>
+                    <li>Font-family: 'Roboto', sans-serif</li>
+                    <li>Font-size: 1rem</li>
+                    <li>Line-height: 1.6</li>
+                    <li>Color: #212529</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
+<style>
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+header {
+    background-color: #344a40;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    border: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Colors Section */
+.color-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.color-swatch {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.color-info p {
+    margin: 5px 0;
+}
+
+/* Fonts Section */
+.font-container {
+    margin-bottom: 30px;
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.source-sans {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.font-style-regular {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-style-bold {
+    font-weight: 700;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+/* Text Styles Section */
+.text-style-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.text-style-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-style-container li {
+    background-color: #e9ecef;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-family: "SFMono", "Courier New", monospace;
+}
+</style>
